@@ -30,4 +30,8 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+norm:
+	@clear
+	@norminette | grep Error || true
+
+.PHONY: all clean fclean re norm
